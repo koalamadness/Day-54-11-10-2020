@@ -2,6 +2,10 @@
 #define COMPUTADORA_H
 
 #include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
 
 class Computadora
 {
@@ -28,7 +32,17 @@ public:
 
   void setCosto(const float cst);
   float getCosto();
-  
+
+  friend ostream& operator<<(ostream& out, const Computadora& c)
+  {
+    out << left;
+    out << setw(20) << c.sistemaOperativo;
+    out << setw(15) << c.memoriaRAM;
+    out << setw(15) << c.marca;
+    out << setw(15) << c.costo;
+    out << endl;
+    return out;
+  }
 };
 
 #endif
