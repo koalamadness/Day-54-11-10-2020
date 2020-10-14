@@ -43,6 +43,26 @@ public:
     out << endl;
     return out;
   }
+  
+  friend istream& operator>>(istream& i, Computadora& c)
+  {
+    cout << "Sistema Operativo: ";
+    getline(cin, c.sistemaOperativo);
+
+    cout << "Memoria RAM: ";
+    cin >> c.memoriaRAM;
+
+    cout << "Marca: ";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n' );
+    
+    getline(cin, c.marca);
+
+    cout << "Costo: ";
+    cin >> c.costo;
+
+    return i;
+  }
+  
 };
 
 #endif

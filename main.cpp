@@ -13,8 +13,16 @@ int main() {
   co0.setMarca("Lenovo");
   co0.setCosto(24746.73);
 
-  lab.agregarFinal(co0);
-  lab.agregarFinal(co1);
+  //lab.agregarFinal(co0);
+  //lab.agregarFinal(co1);
+
+  lab << co0 << co1;
+
+  Computadora c03;
+
+  cin >> c03;
+
+  lab << c03;
 
   lab.mostrar();
 }

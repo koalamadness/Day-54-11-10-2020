@@ -7,7 +7,7 @@ Laboratorio::Laboratorio()
   cont = 0;
 }
 
-void Laboratorio::agregarFinal(const Computadora& co)
+void Laboratorio::agregarComputadora(const Computadora& co)
 {
   if(cont < 5) 
   {
